@@ -13,7 +13,7 @@ Người 4 — Durability, crash, evaluation và báo cáo: kiểm chứng host 
 
 ## 3. Đóng góp cụ thể
 
-- Commit `<HASH>` — `test(crash): cover retry, crash/resume idempotency, approval binding and order cap`.
+- Commit `75e45da` — `Add crash resilience tests and crash report JSON`.
 - Thêm `src/tests/test_durability_resume.py` (18 test):
   - gọi lại cùng claim 5 lần → 1 dòng ledger, 1 audit, key `refund:C-003`;
   - crash `before_effect` → không ghi gì, resume commit đúng một lần;
@@ -31,7 +31,7 @@ Người 4 — Durability, crash, evaluation và báo cáo: kiểm chứng host 
 
 ## 4. Bằng chứng
 
-- Commit: `<HASH>`
+- Commit: `75e45da`
 - Test: `src/tests/test_durability_resume.py` — `python -m pytest -q` → 82 passed.
 - `python -m lab8.crash_test --count 20 --out reports/crash.json` → `crash_safety 20/20`.
 - `src/reports/benchmark.json`: run id `R-workflow-C-001-s11` … `R-workflow-C-014-s55`; swarm fail duy nhất `R-swarm-C-002-s55`.

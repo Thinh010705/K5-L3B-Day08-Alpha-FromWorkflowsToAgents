@@ -6,7 +6,7 @@ Tối đa 5 trang ngoài phụ lục. Số liệu lấy từ file trong `src/rep
 
 - Tên nhóm: Alpha (lớp L3B)
 - Thành viên: xem `TEAM.md`
-- Commit chốt (trùng `report/team/decision_adr.md`): `<HASH>`
+- Commit chốt (trùng `report/team/decision_adr.md`): `75e45da`
 
 ## 2. Mục tiêu và cách tiếp cận
 

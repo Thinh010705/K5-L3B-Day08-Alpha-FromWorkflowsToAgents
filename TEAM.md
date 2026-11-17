@@ -30,7 +30,7 @@ Gợi ý chia vai:
 | Cao Minh Quang | Workflow và tích hợp | 344fbc9 | tests/test_workflow_deterministic.py |
 | Nguyễn Trọng Khiêm | Single agent | 73110d5 | tests/test_single_agent.py |
 | Nguyễn Năng Thịnh | Orchestrator và handoff | 59bd15a | tests/test_orchestrator_security.py |
-| Hoàng Minh Quyền | Durability, crash, evaluation và báo cáo | <HASH> | tests/test_durability_resume.py |
+| Hoàng Minh Quyền | Durability, crash, evaluation và báo cáo | 75e45da | tests/test_durability_resume.py |
 
 ## Cá nhân
 
@@ -111,7 +111,7 @@ Sao chép mục dưới đây cho từng thành viên.
 
 ### Bằng chứng
 
-- Commit: `<HASH>` (`test(crash): cover retry, crash/resume idempotency, approval binding and order cap`)
+- Commit: `75e45da` (`Add crash resilience tests and crash report JSON`)
 - File test: `src/tests/test_durability_resume.py`
 - Report: `src/reports/crash.json`, `src/reports/benchmark.json`
 - Báo cáo chi tiết: `report/team/2A202603961_HoangMinhQuyen.md`
