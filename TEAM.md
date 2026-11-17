@@ -14,7 +14,7 @@
 |   1 | Cao Minh Quang | 2A202603906 | cquang2k5@gmail.com | https://github.com/quang011105 | Workflow + Integration |
 |   2 | Nguyễn Trọng Khiêm | 2A202604109 | khiem14205@gmail.com | https://github.com/KhiemNTK | Single agent |
 |   3 | Nguyễn Năng Thịnh | 2A202604028 | thinh010705@gmail.com | https://github.com/Thinh010705 | Orchestrator + Handoff |
-|   4 |        |      |       |        | Durability, Crash & Evaluation |
+|   4 | Hoàng Minh Quyền | 2A202603961 | quyentryhard@gmail.com | https://github.com/EddyTryToCode | Durability, Crash & Evaluation |
 
 Gợi ý chia vai:
 
@@ -30,6 +30,7 @@ Gợi ý chia vai:
 | Cao Minh Quang | Workflow và tích hợp | 344fbc9 | tests/test_workflow_deterministic.py |
 | Nguyễn Trọng Khiêm | Single agent | 73110d5 | tests/test_single_agent.py |
 | Nguyễn Năng Thịnh | Orchestrator và handoff | 59bd15a | tests/test_orchestrator_security.py |
+| Hoàng Minh Quyền | Durability, crash, evaluation và báo cáo | <HASH> | tests/test_durability_resume.py |
 
 ## Cá nhân
 
@@ -96,7 +97,7 @@ Sao chép mục dưới đây cho từng thành viên.
 - File test: `src/tests/test_orchestrator_security.py`
 - Báo cáo chi tiết: `report/team/2A202604028_NguyenNangThinh.md`
 
-## MSSV_HoTen
+## 2A202603961_HoangMinhQuyen
 
 ### Phần việc phụ trách
 
@@ -104,8 +105,13 @@ Sao chép mục dưới đây cho từng thành viên.
 
 ### Đóng góp cụ thể
 
--
+- Kiểm chứng host `durability.py` (không sửa): transaction ledger + audit, idempotency key `refund:{claim_id}`, resume sau crash.
+- Thêm 18 test trong `src/tests/test_durability_resume.py`: gọi lại cùng claim, crash ở 3 điểm rồi resume, approval của claim khác, order đã hoàn trước, trần theo order, và crash→resume end-to-end cho workflow/single/orchestrator.
+- Chạy crash suite (20/20) và benchmark 4 shape × 14 claim × 5 seed; điền ADR (chọn workflow), research card (R1 · Scaling) và group report.
 
 ### Bằng chứng
 
--
+- Commit: `<HASH>` (`test(crash): cover retry, crash/resume idempotency, approval binding and order cap`)
+- File test: `src/tests/test_durability_resume.py`
+- Report: `src/reports/crash.json`, `src/reports/benchmark.json`
+- Báo cáo chi tiết: `report/team/2A202603961_HoangMinhQuyen.md`
