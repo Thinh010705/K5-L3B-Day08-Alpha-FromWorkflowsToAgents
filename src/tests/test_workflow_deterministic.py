@@ -93,3 +93,4 @@ def test_workflow_trace_contract_compliance(public_db: Path) -> None:
 
     ok, reason = check_trace(result.as_dict())
     assert ok is True, f"Trace failed contract: {reason}"
+
