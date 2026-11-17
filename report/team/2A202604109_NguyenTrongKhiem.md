@@ -15,7 +15,7 @@
 
 ## 3. Đóng góp cụ thể
 
-- **Commit kỹ thuật chính:** `f6ed10a` (`feat(single): implement bounded ReAct agent with read-only tools and add unit tests`).
+- **Commit kỹ thuật chính:** `73110d5` (`feat(single): implement bounded ReAct agent with read-only tools and add unit tests`).
 - **Test đã thêm mới:** `src/tests/test_single_agent.py` gồm 5 unit test:
   1. `test_single_agent_rejects_write_tools_in_react`: Kiểm chứng vòng lặp ReAct từ chối gọi tool ghi tiền (`issue_refund`).
   2. `test_single_agent_immune_to_ticket_delay_distortion`: Kiểm chứng ca C-002 ở seed 55 vẫn đạt trạng thái `denied` (không bị lỗi phân kỳ như Swarm).
@@ -31,7 +31,7 @@
 
 ## 4. Bằng chứng
 
-- **Commit Hash:** `f6ed10a`
+- **Commit Hash:** `73110d5`
 - **Kết quả Unit Test cá nhân (`src/tests/test_single_agent.py`):**
   - Chạy lệnh: `pytest -q tests/test_single_agent.py`
   - Kết quả: `5 passed in 0.33s`.
